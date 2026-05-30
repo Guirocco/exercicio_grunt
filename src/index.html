@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Biscoito da Sorte Virtual</title>
     <link rel="stylesheet" href="ENDERECO_DO_CSS">
 </head>
 <body>
-    <main>
-        <h1>Sorteador</h1>
-        <form id="form-sorteador">
-            <div>
-                <label for="numero-maximo">Numero máximo</label>
-                <input type="number" id="numero-maximo" required min="2" value="2" step="1">
-            </div>
-            <button type="submit">Sortear número</button>
-        </form>
-        <div class="resultado">
-            O numero sorteado foi: <span id="resultado-valor"></span>
+    <div class="container">
+        <h1>Biscoito da Sorte</h1>
+        
+        <div class="biscoito-area">
+            <span id="biscoito-emoji" class="biscoito">🥠</span>
         </div>
-    </main>
+
+        <div class="mensagem-box">
+            <p id="mensagem">Clica no botão para revelares a tua sorte do dia!</p>
+        </div>
+
+        <button id="btn-abrir">Abrir Biscoito</button>
+    </div>
 
     <script src="ENDERECO_DO_JS"></script>
 </body>
-</html> 
+</html>
