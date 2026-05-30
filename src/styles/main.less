@@ -1,0 +1,105 @@
+// Variáveis de Cores
+@bg-color: #d8c6a2;
+@card-bg: #ffffff;
+@text-color: #4a3b32;
+@accent-color: #d4a373;
+@accent-hover: #b98a5a;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: @bg-color;
+    color: @text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: @card-bg;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        color: darken(@accent-color, 15%);
+    }
+}
+
+.biscoito-area {
+    margin-bottom: 25px;
+    
+    .biscoito {
+        font-size: 5rem;
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        // Classe de animação que o JS vai ativar
+        &.aberto {
+            animation: quebrar 0.5s forwards;
+        }
+    }
+}
+
+.mensagem-box {
+    background-color: lighten(@bg-color, 2%);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid @accent-color;
+    margin-bottom: 30px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: 1.05rem;
+        font-style: italic;
+        line-height: 1.4;
+    }
+}
+
+button {
+    background-color: @accent-color;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3);
+
+    &:hover {
+        background-color: @accent-hover;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+// Animação simples de impacto ao abrir
+@keyframes quebrar {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8) rotate(-10deg); }
+    100% { transform: scale(1.2) rotate(10deg); }
+}
